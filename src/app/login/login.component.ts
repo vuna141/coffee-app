@@ -24,6 +24,13 @@ export class LoginComponent implements OnInit {
     //   alert('Sai email hoac password');
     // }
     this.authService.authenticate(this.email, this.password)
+      .subscribe((res: any) => {
+        if (!res) {
+          alert('Sai email hoac password');
+        } else {
+          this.router.navigate(['home']);
+        }
+      });
   }
 
 }

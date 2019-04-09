@@ -10,16 +10,20 @@ import { ITable } from 'src/app/interfaces/ITable';
 })
 export class ListTableComponent implements OnInit {
   tables: ITable[];
-  isList: Boolean = false
+  isList: Boolean = false;
   // Dung de inject Table Service vao trong 1 component
   constructor(public tableSvc: TableService, private route: ActivatedRoute) {
   }
   ngOnInit() {
-    const display = this.route.snapshot.queryParams.display 
-    if(display === 'list') {
-      this.isList = true
+    const display = this.route.snapshot.queryParams.display;
+    if (display === 'list') {
+      this.isList = true;
     }
-    this.tables = this.tableSvc.tables;
+    // this.tables = this.tableSvc.tables;
+
+    this.tableSvc.getTables().subscribe((data: any) => {
+      this.tables = data;
+    });
   }
 
 }

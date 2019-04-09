@@ -5,11 +5,13 @@ import { CommonModule } from '@angular/common';
 import { TableService } from './services/table.service';
 import { StatusPipe } from './pipes/status.pipe';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule
+        RouterModule,
+        HttpClientModule
     ],
     exports: [
     ],

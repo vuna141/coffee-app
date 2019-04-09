@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { tap } from 'rxjs/operators'
 @Injectable({
   providedIn: 'root'
 })
@@ -22,9 +22,10 @@ export class AuthService {
     let headers = new HttpHeaders();
     headers = headers.set("Authorization", `Basic ${encode}`);
     headers = headers.set("Content-Type", "application/json");
-    this.http.post('http://lexuanquynh.com:8080/auth', {} , { headers: headers}).pipe((res: any) => {
-      console.log(res)
-      localStorage.setItem('token', res.token as string)
-    })
+    return this.http.post('http://lexuanquynh.com:8080/auth', {}, { headers: headers })
+      .pipe(tap((res: any) => {
+        localStorage.setItem('token', res.token as string)
+        return res;
+      }))
   }
 }
