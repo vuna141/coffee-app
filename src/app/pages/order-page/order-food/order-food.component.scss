@@ -1,0 +1,25 @@
+:host {
+    display: flex;
+    background-color: white;
+    .picture {
+        flex: 1;
+        img {
+          width: 100%;
+          
+        }
+    }
+    .details {
+        flex: 1;
+        text-align: center;
+        .control {
+            display: flex;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+
+            input {
+                width: 20px;
+            }
+        }
+    }
+}

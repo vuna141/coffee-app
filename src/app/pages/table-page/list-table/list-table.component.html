@@ -1,0 +1,15 @@
+<div class="table-container">
+    <div class="display">
+        <div>Display</div>
+        <div>
+            <img src="assets/grid.png" alt="" (click)="isList = false"><!-- khai bao khi click vao thi isList la false -->
+            
+            <img src="assets/list.png" alt="" (click)="isList = true"><!-- khai bao khi click vao thi isList la true -->
+        </div>
+    </div>
+    <div [ngClass]="{'list': isList, 'grid': !isList}"><!-- dung ngClass, khai bao list la isList, grid la phu dinh cua isList -->
+        <app-table *ngFor="let table of tables" [tableName]="table.name" [tableStatus]="table.status" [customerName]="table.customer"
+            [totalOrder]="table.order"></app-table>
+            <!-- tao ra vong lap for de lan luot in ra cac table trong mang table -->
+    </div>
+</div>

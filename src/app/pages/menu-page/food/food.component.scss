@@ -1,0 +1,41 @@
+:host {
+    display: flex;
+    max-width: 500px;
+    background: green;
+    div {
+        flex: 1;
+        img {
+            width: 100%;
+        }
+    }
+
+    
+    .cover {
+        padding: 0.5rem;
+    }
+    .content {
+        text-align: center;
+        padding: 0.5rem;
+        h3 {
+            color: #74572D;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        h4 {
+            color:#422912;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        p {
+           color: #727272;
+           
+        }
+        button {
+            color: white;
+            background: #422912;
+            padding: 0.5rem 1rem;
+            border-radius: 16px;
+            border: none;
+        }
+    }
+}

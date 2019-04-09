@@ -1,0 +1,26 @@
+<div class="logo">
+  <img src="assets/cup.png" alt="">
+</div>
+<div class="title">
+  Welcome to CONO
+</div>
+<div class="subtitle">
+  helping you order coffee
+</div>
+<form>
+  <div class="form-group">
+    <label for="">USERNAME</label>
+    <!--De su dung ngModel can import FormsModule vao trong AppModdule-->
+    <!--ngModel la mot directive su dung two way binding-->
+    <input type="email" placeholder="Your email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label for="">PASSWORD</label>
+    <input type="text" type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div>
+    <button (click)="login()">
+      LOGIN
+    </button>
+  </div>
+</form>

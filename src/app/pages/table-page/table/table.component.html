@@ -1,0 +1,34 @@
+<div class="table" *ngIf="tableStatus === 0">
+  <div class="header">
+    <div>
+      {{tableName}}
+    </div>
+    <div>
+      {{tableStatus | status}}
+    </div>
+  </div>
+  <div class="body">
+    <button [routerLink]="['/home/order']">
+      Order
+    </button>
+  </div>
+</div>
+
+<div class="table active" *ngIf="tableStatus !== 0">
+  <div class="header">
+    <div>
+      {{tableName}}
+    </div>
+    <div>
+      {{customerName}}
+    </div>
+  </div>
+  <div class="body">
+    <div>
+      {{ totalOrder }} Orders
+    </div>
+    <div>
+      {{ tableStatus | status}}
+    </div>
+  </div>
+</div>

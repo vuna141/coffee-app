@@ -1,0 +1,53 @@
+body {
+    width: 100%;
+}
+
+.logo {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    img {
+        width: 50px;
+        margin: auto;
+    }
+}
+
+.title {
+    text-align: center;
+    color: #422912;
+    font-size: 20px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #B8B6B6;
+    font-size: 13px;
+}
+
+form {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .form-group {
+        margin-bottom: 1rem;
+        label {
+            display: block;
+        }
+        input {
+            border: none;
+            padding: 8px;
+            border-bottom: 1px #B8B6B6 solid;
+
+        }
+    }
+}
+
+button {
+    margin-top: 8rem;
+    padding: 1rem 6rem;
+    background-color: #422912;
+    border-radius: 20px;
+    color: white;
+    font-family: Poppins, SemiBold;
+}

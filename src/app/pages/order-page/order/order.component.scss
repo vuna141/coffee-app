@@ -1,0 +1,17 @@
+:host {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.intro {
+    background-color: #C8B496;
+    color: white;
+}
+.food-type {
+    background-color: #EBEBEB;
+}
+
+.content {
+    background-color: green; 
+    flex: 1;
+}

@@ -1,0 +1,22 @@
+.table-container {
+    .display {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        img {
+            margin-left: 0.5rem;
+        }
+    }
+    .list {
+        app-table {
+            display: block;
+        }
+    }
+
+    .grid {
+        app-table {
+            width: 50%;
+            display: inline-block;
+        }
+    }
+}

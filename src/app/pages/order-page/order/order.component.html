@@ -1,0 +1,14 @@
+<div class="intro">
+  <div>TABLE 01</div>
+  <div>CUSTOMER'S NAME</div>
+  <input type="text">
+</div>
+<div class="food-type">
+  <img src="" alt="">
+  <img src="" alt="">
+  <img src="" alt="">
+  <img src="" alt="">
+</div>
+<div class="content">
+<app-order-food *ngFor ="let item of foods" [food]="item"></app-order-food>
+</div>
