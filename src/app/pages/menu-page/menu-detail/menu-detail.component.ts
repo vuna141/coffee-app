@@ -14,7 +14,9 @@ export class MenuDetailComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.params.id;
-    this.food = this.menuSvc.getFoodById(id)
+    this.menuSvc.getFoodById(id).subscribe(data => {
+      this.food = data;
+    })
   }
 
 }

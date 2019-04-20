@@ -32,6 +32,7 @@ export class TableService {
     return this.http.get(`https://lexuanquynh.com/tables?access_token=${token}`)
       .pipe(tap(res => {
       }), map((res: any[]) => {
+        console.log(res)
         const tables = res.map(x => {
           const table: ITable = {
             customer: x.customerName,

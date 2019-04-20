@@ -13,7 +13,9 @@ export class MenuComponent implements OnInit {
   constructor(private menuSvc: MenuService) { }
 
   ngOnInit() {
-    this.foods = this.menuSvc.getFoods();
+    this.menuSvc.getFoods().subscribe(data => {
+      this.foods = data
+    });
   }
 
 }

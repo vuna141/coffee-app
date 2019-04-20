@@ -12,7 +12,7 @@ export class OrderComponent implements OnInit {
   constructor(private menuSvc: MenuService) { }
 
   ngOnInit() {
-    this.foods = this.menuSvc.getFoods();
+    // this.foods = this.menuSvc.getFoods();
   }
 
 }
